@@ -1,0 +1,23 @@
+{
+    "name": "InvoiceCore Hub",
+    "short_name": "InvoiceCore",
+    "description": "Make invoices online for free. The best online invoice generator for freelancers and small businesses.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ]
+}

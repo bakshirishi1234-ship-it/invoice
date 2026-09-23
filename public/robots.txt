@@ -1,0 +1,51 @@
+# InvoiceCore Hub Robots.txt
+# https://www.invoicecorehub.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://invoicecorehub.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Block specific paths if needed
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dist/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
