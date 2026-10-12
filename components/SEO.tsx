@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
     title: string;
@@ -21,8 +22,9 @@ const SEO: React.FC<SEOProps> = ({
     structuredData
 }) => {
     const siteTitle = 'InvoiceCore Hub';
-    const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
-    const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : 'https://invoicecorehub.com');
+    const { pathname } = useLocation();
+    const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
+    const currentUrl = canonicalUrl || `https://invoicecorehub.com${pathname === '/' ? '' : pathname}`;
 
     return (
         <Helmet>
