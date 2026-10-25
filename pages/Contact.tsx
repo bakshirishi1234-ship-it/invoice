@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, MessageSquare, Send, Phone, MapPin, Clock, AlertCircle, CheckCircle } from 'lucide-react';
+import { Mail, MessageSquare, Send, MapPin, Clock, AlertCircle, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const Contact: React.FC = () => {
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-primary-600 dark:text-primary-400 mt-1 flex-shrink-0 mr-4" />
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-1">Email</h3>
-                    <p className="text-slate-600 dark:text-slate-400">support@invoicecorehub.com</p>
+                    <p className="text-slate-600 dark:text-slate-400">invoicecorehub@gmail.com</p>
                     <p className="text-sm text-slate-500 dark:text-slate-500 mt-1">We typically reply within 24 hours</p>
                   </div>
                 </div>
@@ -88,23 +88,10 @@ const Contact: React.FC = () => {
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 text-primary-600 dark:text-primary-400 mt-1 flex-shrink-0 mr-4" />
                   <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">Business Address</h3>
-                    <p className="text-slate-600 dark:text-slate-400">InvoiceCore Hub LLC</p>
-                    <p className="text-slate-600 dark:text-slate-400">EN69, Sector V</p>
-                    <p className="text-slate-600 dark:text-slate-400">Kolkata, WB 700102</p>
+                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">Location</h3>
+                    <p className="text-slate-600 dark:text-slate-400">InvoiceCore Hub (operated by Rishi Bakshi)</p>
+                    <p className="text-slate-600 dark:text-slate-400">Kolkata, West Bengal 700102</p>
                     <p className="text-slate-600 dark:text-slate-400">India</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone */}
-              <div className="mb-8 pb-8 border-b border-slate-200 dark:border-slate-700">
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-primary-600 dark:text-primary-400 mt-1 flex-shrink-0 mr-4" />
-                  <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white mb-1">Phone</h3>
-                    <p className="text-slate-600 dark:text-slate-400">+91 8617202920</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500 mt-1">Business hours only</p>
                   </div>
                 </div>
               </div>
@@ -116,7 +103,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h3 className="font-bold text-slate-900 dark:text-white mb-1">Business Hours</h3>
                     <p className="text-slate-600 dark:text-slate-400">Monday - Friday</p>
-                    <p className="text-slate-600 dark:text-slate-400">9:00 AM - 5:00 PM EST</p>
+                    <p className="text-slate-600 dark:text-slate-400">10:00 AM - 6:00 PM IST</p>
                   </div>
                 </div>
               </div>

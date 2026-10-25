@@ -14,14 +14,13 @@ const Footer: React.FC = () => {
               <span className="text-lg font-bold text-slate-900 dark:text-white tracking-tight">InvoiceCore Hub</span>
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-              The simplest way to create professional documents. Built for US freelancers and small businesses with privacy in mind.
+              The simplest way to create professional documents. Built for freelancers and small businesses with privacy in mind.
             </p>
             <div className="mt-4 text-xs text-slate-400 dark:text-slate-500 space-y-1">
-              <p className="font-semibold text-slate-600 dark:text-slate-400">InvoiceCore Hub LLC</p>
-              <p>EN69, Sector V</p>
-              <p>Kolkata, WB 700102, India</p>
-              <p className="mt-2 text-slate-600 dark:text-slate-400">Email: support@invoicecorehub.com</p>
-              <p>Phone: +91 8617202920</p>
+              <p className="font-semibold text-slate-600 dark:text-slate-400">InvoiceCore Hub</p>
+              <p>Owned and operated by Rishi Bakshi</p>
+              <p>Kolkata, West Bengal 700102, India</p>
+              <p className="mt-2 text-slate-600 dark:text-slate-400">Email: invoicecorehub@gmail.com</p>
             </div>
           </div>
           <div>

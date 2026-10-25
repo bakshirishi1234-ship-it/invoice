@@ -280,12 +280,13 @@ const About: React.FC = () => {
 
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-lg">
-                <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl">Legal Entity</h3>
+                <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl">Ownership</h3>
                 <div className="space-y-2 text-slate-600 dark:text-slate-400">
-                  <p><strong className="text-slate-900 dark:text-white">Business Name:</strong> InvoiceCore Hub LLC</p>
+                  <p><strong className="text-slate-900 dark:text-white">Website:</strong> InvoiceCore Hub (invoicecorehub.com)</p>
+                  <p><strong className="text-slate-900 dark:text-white">Owner:</strong> Rishi Bakshi</p>
                   <p><strong className="text-slate-900 dark:text-white">Founded:</strong> 2024</p>
-                  <p><strong className="text-slate-900 dark:text-white">Type:</strong> Limited Liability Company</p>
-                  <p><strong className="text-slate-900 dark:text-white">Jurisdiction:</strong> United States</p>
+                  <p><strong className="text-slate-900 dark:text-white">Type:</strong> Independent website run by an individual (not a registered company)</p>
+                  <p><strong className="text-slate-900 dark:text-white">Based in:</strong> India</p>
                 </div>
               </div>
 
@@ -293,8 +294,7 @@ const About: React.FC = () => {
                 <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl">Contact Details</h3>
                 <div className="space-y-2 text-slate-600 dark:text-slate-400">
                   <p><strong className="text-slate-900 dark:text-white">Email:</strong> invoicecorehub@gmail.com</p>
-                  <p><strong className="text-slate-900 dark:text-white">Phone:</strong> +91 8617202920</p>
-                  <p><strong className="text-slate-900 dark:text-white">Address:</strong> EN69, Sector V<br />Kolkata, WB 700102, India</p>
+                  <p><strong className="text-slate-900 dark:text-white">Location:</strong> Kolkata, West Bengal 700102, India</p>
                 </div>
               </div>
 
@@ -304,7 +304,7 @@ const About: React.FC = () => {
                   <p><strong className="text-slate-900 dark:text-white">Primary Market:</strong> United States</p>
                   <p><strong className="text-slate-900 dark:text-white">Global Reach:</strong> Available Worldwide</p>
                   <p><strong className="text-slate-900 dark:text-white">Languages:</strong> English</p>
-                  <p><strong className="text-slate-900 dark:text-white">Support Hours:</strong> Mon-Fri, 9 AM - 5 PM EST</p>
+                  <p><strong className="text-slate-900 dark:text-white">Support Hours:</strong> Mon-Fri, 10 AM - 6 PM IST</p>
                 </div>
               </div>
 

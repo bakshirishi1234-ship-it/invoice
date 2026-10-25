@@ -320,13 +320,10 @@ const Legal: React.FC = () => {
                 </p>
                 <div className="space-y-3">
                   <p className="text-slate-900 dark:text-white">
-                    <strong>InvoiceCore Hub Legal Team</strong>
+                    <strong>InvoiceCore Hub (Rishi Bakshi)</strong>
                   </p>
                   <p className="text-slate-700 dark:text-slate-300">
-                    📧 Email: legal@invoicecorehub.com
-                  </p>
-                  <p className="text-slate-700 dark:text-slate-300">
-                    📧 Support: support@invoicecorehub.com
+                    📧 Email: invoicecorehub@gmail.com
                   </p>
 
                 </div>
