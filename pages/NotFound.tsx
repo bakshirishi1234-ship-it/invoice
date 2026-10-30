@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 import { Home, Search, ArrowLeft } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 
 const NotFound: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <meta name="robots" content="noindex, follow" />
+      </Helmet>
       <SEO
         title="Page Not Found | InvoiceCore Hub"
         description="The page you are looking for does not exist. Browse our free invoice generator, business tools, and guides."

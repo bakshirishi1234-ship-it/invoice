@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { ToolDef, ToolCategory, DocumentType, Article } from './types';
 import { MORE_ARTICLES } from './data/moreArticles';
+import { EXPANDED_CONTENT } from './data/expandedArticles';
 
 
 export const TOOLS: ToolDef[] = [
@@ -668,4 +669,7 @@ Clear records resolve payment disputes faster, support loan applications, and ma
   }
 ];
 
-export const ARTICLES: Article[] = [...BASE_ARTICLES, ...MORE_ARTICLES];
+export const ARTICLES: Article[] = [
+  ...BASE_ARTICLES.map((a) => ({ ...a, content: EXPANDED_CONTENT[a.id] ?? a.content })),
+  ...MORE_ARTICLES,
+];
