@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, ChevronRight, Star, Users, Shield, Zap, FileText, Search } from 'lucide-react';
-import { TOOLS, FAQs } from '../constants';
+import { TOOLS, FAQs, ARTICLES } from '../constants';
 import SEO from '../components/SEO';
 import React, { useState } from 'react';
 
@@ -432,11 +432,7 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { id: 'how-to-create-professional-invoices', title: 'How to Create Professional Invoices That Get Paid Faster', category: 'Business Tips' },
-              { id: 'freelancer-tax-guide-us', title: 'The Ultimate Tax Guide for US-Based Freelancers', category: 'Taxes' },
-              { id: 'when-to-use-an-nda', title: 'When to Use an NDA: A Practical Guide for Small Businesses', category: 'Legal' },
-            ].map((article) => (
+            {ARTICLES.slice(-6).reverse().map((article) => (
               <Link
                 key={article.id}
                 to={`/article/${article.id}`}

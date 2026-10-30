@@ -15,6 +15,7 @@ import {
   Mail
 } from 'lucide-react';
 import { ToolDef, ToolCategory, DocumentType, Article } from './types';
+import { MORE_ARTICLES } from './data/moreArticles';
 
 
 export const TOOLS: ToolDef[] = [
@@ -270,7 +271,7 @@ export const FAQs = [
   }
 ];
 
-export const ARTICLES: Article[] = [
+const BASE_ARTICLES: Article[] = [
   {
     id: 'how-to-create-professional-invoices',
     title: 'How to Create Professional Invoices That Get Paid Faster',
@@ -666,3 +667,5 @@ Clear records resolve payment disputes faster, support loan applications, and ma
     `
   }
 ];
+
+export const ARTICLES: Article[] = [...BASE_ARTICLES, ...MORE_ARTICLES];
