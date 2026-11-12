@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FileText, Twitter } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -53,13 +53,8 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-12 border-t border-slate-100 dark:border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-400">
-            &copy; 2025 InvoiceCore Hub. All rights reserved.
+            &copy; {new Date().getFullYear()} InvoiceCore Hub. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <a href="https://twitter.com/InvoiceCoreHub" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" className="text-slate-400 hover:text-slate-500">
-              <Twitter className="h-5 w-5" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>
