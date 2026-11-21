@@ -1,9 +1,9 @@
 import React, { useEffect, Suspense, lazy, ComponentType } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { TOOLS } from '../constants';
+import { TOOLS, ARTICLES } from '../constants';
+import { TOOL_GUIDES } from '../data/toolGuides';
 import { DocumentType, ToolDef } from '../types';
 import { ChevronLeft, AlertTriangle, Loader2, Users, Shield, Zap } from 'lucide-react';
-import { generateToolKeywords } from '../hooks/useSEO';
 import SEO from '../components/SEO';
 
 // Lazy load specific tool components.
@@ -40,16 +40,15 @@ const ToolPage: React.FC = () => {
 
   // Prepare SEO data with enhanced keywords for each tool
   const title = tool
-    ? `Free ${tool.name} - Create ${tool.name} Online Free | InvoiceCore Hub`
-    : "Tool Not Found | InvoiceCore Hub";
+    ? `Free ${tool.name} - Create and Download as PDF`
+    : "Tool Not Found";
 
   const description = tool
     ? `${tool.description} 100% free, no signup required. Create and download a professional ${tool.name.toLowerCase()} PDF instantly.`
     : "The tool you are looking for doesn't exist.";
 
-  const keywords = tool
-    ? `${generateToolKeywords(tool.name, tool.category)}, invoice, free invoice, digital invoice, seo free invoice generator, invoice generator free, best invoice app`
-    : "tool not found";
+  const guide = tool ? TOOL_GUIDES[tool.id] : undefined;
+  const relatedArticles = guide ? ARTICLES.filter((a) => guide.related.includes(a.id)) : [];
 
   // Construct JSON-LD Schema
   const softwareAppSchema = tool ? {
@@ -72,7 +71,6 @@ const ToolPage: React.FC = () => {
       <SEO
         title={title}
         description={description}
-        keywords={keywords}
         type="website"
         structuredData={softwareAppSchema}
       />
@@ -184,14 +182,54 @@ const ToolPage: React.FC = () => {
                 </li>
               </ul>
 
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
-                Who Uses This Tool?
-              </h3>
-              <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                Our {tool.name.toLowerCase()} is designed for freelance designers, consultants, contractors,
-                plumbers, electricians, photographers, web developers, and small business owners across the United States.
-                Whether you are billing clients, creating estimates, or generating legal documents, InvoiceCore Hub
-                provides a straightforward way to produce professional PDFs without installing software.
+              {guide && (
+                <>
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
+                    When to Use a {tool.name}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{guide.whenToUse}</p>
+
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
+                    What to Include
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2 text-slate-600 dark:text-slate-300">
+                    {guide.include.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
+                    How to Use This Tool
+                  </h3>
+                  <ol className="list-decimal pl-6 space-y-2 text-slate-600 dark:text-slate-300">
+                    {guide.steps.map((item) => <li key={item}>{item}</li>)}
+                  </ol>
+
+                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
+                    Common Mistakes to Avoid
+                  </h3>
+                  <ul className="list-disc pl-6 space-y-2 text-slate-600 dark:text-slate-300">
+                    {guide.mistakes.map((item) => <li key={item}>{item}</li>)}
+                  </ul>
+
+                  {relatedArticles.length > 0 && (
+                    <>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mt-6 mb-3">
+                        Related Guides
+                      </h3>
+                      <ul className="list-disc pl-6 space-y-2 text-slate-600 dark:text-slate-300">
+                        {relatedArticles.map((a) => (
+                          <li key={a.id}>
+                            <Link to={`/article/${a.id}`} className="text-primary-600 dark:text-primary-400 hover:underline">{a.title}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </>
+              )}
+
+              <p className="text-sm text-slate-500 dark:text-slate-400 mt-6">
+                Documents generated here are general-purpose templates, not legal, tax or financial advice. Review them
+                and consult a qualified professional where the stakes are high.
               </p>
             </div>
           </div>
